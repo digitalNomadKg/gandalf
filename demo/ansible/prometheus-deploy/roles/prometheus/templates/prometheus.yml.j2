@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'adcash-webapp'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com:80']
+      

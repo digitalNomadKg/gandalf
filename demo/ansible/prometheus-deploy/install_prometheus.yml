@@ -1,0 +1,5 @@
+- name: Install Prometheus on VM
+  hosts: prometheus
+  become: yes
+  roles:
+    - prometheus
