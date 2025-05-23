@@ -75,49 +75,50 @@ http://98.82.247.61:9090/targets
 ```bash
 docker pull drcemae/demo-adcash.webapp:0.0.4
 ```
-🔗 Github remote repository
+🔗 Github repository
 
 ```bash
 git clone https://github.com/digitalNomadKg/gandalf.git
 ```
+or via SSH
+
 ```bash
 git clone git@github.com:digitalNomadKg/gandalf.git
 ```
 ---
 ### 🖥️  Run and test locally
 
-🐳 Docker Image
+🐳 Using Docker
 
 ```bash
 docker run -p 8080:8080 drcemae/demo-adcash.webapp:0.0.4
 ```
-🔗 Github remote repository
+🔗 Using Maven
 
 ```bash
 cd demo
-```
-```bash
 mvn clean package
-```
-```bash
 mvn spring-boot:run
 ```
+🔍 Test Endpoints
+
 ```bash
-curl -X GET "http://localhost:8080/gandalf"
-```
-```bash
-curl -X GET "http://localhost:8080/colombo"
-```
-```bash
+curl "http://localhost:8080/gandalf"
+curl "http://localhost:8080/colombo"
 curl http://localhost:8080/actuator/prometheus | grep requests_total
 ```
-```bash
-http://localhost:8080/colombo
-```
-```bash
-http://localhost:8080/gandalf
-```
-```bash
-http://localhost:8080/actuator/prometheus 
-```
+Or open directly in the browser:
 
+* http://localhost:8080/colombo
+
+* http://localhost:8080/gandalf
+
+* http://localhost:8080/actuator/prometheus 
+
+
+💡 Future Improvements
+- ✅ Integrate CI/CD pipeline (e.g., GitHub Actions or GitLab CI) for automated builds and deployments
+- ✅ Read more about and implement LoadBalancer with AWS ALB Ingress Controller for better flexibility
+- ✅ Set up a custom domain for the EKS Load Balancer
+- ✅ Add Grafana dashboard
+- ✅ Use Terraform for infrastructure
