@@ -122,3 +122,9 @@ Or open directly in the browser:
 - ✅ Set up a custom domain for the EKS Load Balancer
 - ✅ Add Grafana dashboard
 - ✅ Use Terraform for infrastructure
+
+## 👤 Author
+Timur B.
+
+## 📄 License
+MIT
