@@ -162,9 +162,9 @@ This provides insight into endpoint usage, fulfilling the project’s observabil
 ## 👤 Author
 Timur B.
 
------
+---
 
 ## 📄 License
 MIT
 
------
+---
