@@ -115,16 +115,56 @@ Or open directly in the browser:
 
 * http://localhost:8080/actuator/prometheus 
 
+---
 
-💡 Future Improvements
+## 💡 Future Improvements
 - ✅ Integrate CI/CD pipeline (e.g., GitHub Actions or GitLab CI) for automated builds and deployments
 - ✅ Read more about and implement LoadBalancer with AWS ALB Ingress Controller for better flexibility
 - ✅ Set up a custom domain for the EKS Load Balancer
 - ✅ Add Grafana dashboard
 - ✅ Use Terraform for infrastructure
 
+## 🧠 Decisions & Design Choices
+
+1. 🧱 Spring Boot + Micrometer
+
+I chose Spring Boot because it offers fast development with production-ready features out of the box + I was practicing it before.  Micrometer integrates seamlessly with Spring to expose Prometheus-compatible metrics via /actuator/prometheus.
+
+2. 🐳 Dockerized Web App
+
+Containerizing the application with Docker ensures consistent builds and portability. It allows the same image to be used for local testing and Kubernetes deployment.
+
+3. ☁️ AWS EKS for Deployment
+
+AWS EKS was chosen as the Kubernetes platform for its scalability and ease of integration with other AWS services. It abstracts away control plane management, letting me focus on application-level concerns.
+
+4. ⚖️ LoadBalancer Service Type
+
+To satisfy the “static IP” and “port 80 only” requirements, I used a LoadBalancer service in Kubernetes, which provisions an AWS ELB and exposes it via HTTP on port 80.
+
+5. 📊 EC2-hosted Prometheus
+
+Prometheus was deployed to a dedicated EC2 instance using Ansible for automation. This reflects a real-world monitoring setup where metrics collection is handled independently of the application infrastructure.
+
+6. ⚙️ Ansible for Provisioning
+
+I used Ansible to ensure Prometheus setup is reproducible and declarative. This also separates concerns between infrastructure automation and application logic.
+
+7. 📈 Exposed Metrics
+
+The application exports two metrics:
+
+- Total requests to /gandalf
+- Total requests to /colombo
+
+This provides insight into endpoint usage, fulfilling the project’s observability requirements.
+
 ## 👤 Author
 Timur B.
 
+-----
+
 ## 📄 License
 MIT
+
+-----
