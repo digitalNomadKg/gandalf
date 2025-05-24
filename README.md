@@ -42,6 +42,14 @@ Deploy Prometheus on a separate VM using Ansible.
 
 ✅ Currently application is up and running and available at: 
 
+🔍 Test Endpoints
+```bash
+curl http://a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com/gandalf
+curl http://a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com/colombo
+curl http://a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com/actuator/prometheus | grep requests_total
+```
+Or open directly in the browser:
+
 👤 Displays Gandalf's image:
 
 ```bash
