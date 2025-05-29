@@ -40,7 +40,7 @@ Deploy Prometheus on a separate VM using Ansible.
 
 ## 🚀 How to Access the Application
 
-✅ Currently application is up and running and available at: 
+❌ Currently application is down
 
 🔍 Test Endpoints
 ```bash
