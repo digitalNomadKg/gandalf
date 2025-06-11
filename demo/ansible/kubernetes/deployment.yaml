@@ -17,3 +17,10 @@ spec:
           image: drcemae/demo-adcash.webapp:0.0.4
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"
