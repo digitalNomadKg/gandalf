@@ -45,7 +45,11 @@ Deploy Prometheus on a separate VM using Ansible.
 🔍 Test Endpoints
 ```bash
 curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/gandalf
+```
+```bash
 curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/colombo
+```
+```bash
 curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/actuator/prometheus | grep requests_total
 ```
 Or open directly in the browser:
