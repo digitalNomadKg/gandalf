@@ -42,13 +42,11 @@ Deploy Prometheus on a separate VM using Ansible.
 
 ✅ Currently application is up and running and available at: 
 
-❌ Monitoring still down
-
 🔍 Test Endpoints
 ```bash
 curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/gandalf
 curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/colombo
-# curl http://a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com/actuator/prometheus | grep requests_total
+curl http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/actuator/prometheus | grep requests_total
 ```
 Or open directly in the browser:
 
@@ -66,12 +64,12 @@ http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws
 🌍 Prometheus-formatted metrics endpoint:
 
 ```bash
-# http://a3b812cc2db824031ab67dcb175eb5a9-a968637e6cd5b65c.elb.us-east-1.amazonaws.com/actuator/prometheus
+http://a20060d09589b496291d9feca5ad5e74-3dc4e3db68b18dc1.elb.eu-west-1.amazonaws.com/actuator/prometheus
 ```
 
 🌐 Prometheus UI (running on EC2 VM) is accessible via:
 ```bash
-# http://98.82.247.61:9090/targets
+http://18.202.16.234:9090/targets
 ```
 
 ------
